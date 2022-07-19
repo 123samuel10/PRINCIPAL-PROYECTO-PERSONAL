@@ -7,7 +7,10 @@ function enviar1(){
     let nombreEstudiante=document.getElementById("nombre").value;
     alert(`el estudiante es ${nombreEstudiante}`)
 
-}
+    }
+
+  
+
 function enviar2(){
  
 
@@ -27,17 +30,15 @@ function enviar2(){
 }
 
 function notaMayor(){
-    let funcionalidad=(NguardarNota)=>{
-        let notaMayor=0;
-        NguardarNota.forEach(element => {
-            if(element>notaMayor){
-                notaMayor=element;
-            }
-            
-        });
-        return notaMayor;
+let notamayor=0;
+    for(let i in NguardarNota){
+        if(NguardarNota[i]>notamayor){
+            notamayor=NguardarNota[i];
         }
-        alert(`La nota mayor obtenida por el estudiante es: ${funcionalidad(NguardarNota)}`)
+        
+    }
+    alert(`La nota mayor obtenida por el estudiante es: ${notamayor}`)
+    
 }
 
 function notaMenor(){
@@ -56,6 +57,8 @@ function notaMenor(){
 
     }
     alert(`La nota menor obtenida por el estudiante es: ${funcionalidadDos(NguardarNota)}`)
+    
+   
 }
 
 let guardarPromedio=[];
@@ -270,7 +273,163 @@ function promedioEstudianteQuinto(){
      }
      alert(`el promedio del estudiante es ${promedio}`)
    
+    }
+// }--------------------------------------------------------------
+//Sexto estudiante
+let guardareNotasSextoEstudiante=[];
+function enviarEstudiant6(){
+    let estudiante6=document.getElementById("nombreSexto").value
+    alert(`El estudiante es ${estudiante6}`)
 }
+
+function enviarNotasE6(){
+    let cantidadDeNota1=document.getElementById("notaNumeroEstudinate6.1").value;
+    let cantidadDeNota2=document.getElementById("notaNumeroEstudinate6.2").value;
+    let cantidadDeNota3=document.getElementById("notaNumeroEstudinate6.3").value;
+    let cantidadDeNota4=document.getElementById("notaNumeroEstudinate6.4").value;
+    cantidadDeNota1=parseInt(cantidadDeNota1);
+    cantidadDeNota2=parseInt(cantidadDeNota2);
+    cantidadDeNota3=parseInt(cantidadDeNota3);
+    cantidadDeNota4=parseInt(cantidadDeNota4);
+    guardareNotasSextoEstudiante.push(cantidadDeNota1,cantidadDeNota2,cantidadDeNota3,cantidadDeNota4)
+    
+}
+function notaMayorE6(){
+    let notaMayor6=0;
+    for(let i=0; i<guardareNotasSextoEstudiante.length;i++){
+        if(guardareNotasSextoEstudiante[i]>notaMayor6){
+            notaMayor6=guardareNotasSextoEstudiante[i];
+        }
+
+    }
+    alert(`La nota mayor obtenida por el estudiante es ${notaMayor6}`)
+}
+
+function notaMenorE6(){
+    let notaMenor=1000;
+    for(let i in guardareNotasSextoEstudiante){
+        if(guardareNotasSextoEstudiante[i]<notaMenor){
+            notaMenor=guardareNotasSextoEstudiante[i];
+        }
+    }
+    alert(`La nota menor obtenida por el estudiante es ${notaMenor}`)
+}
+
+function promedioEstudianteSexto(){
+    let promedio6=0;
+    let suma6=0;
+    guardareNotasSextoEstudiante.forEach(element=>{
+        suma6+=element;
+        promedio6=suma6/guardareNotasSextoEstudiante.length;
+    })
+    alert(`El promedio del estudiante es ${promedio6}`)
+}
+// --------------------------------------------------------------------------
+//Septimo estudiante
+let guardareNotasSeptimoEstudiante=[];
+function enviarEstudiant7(){
+    let estudiante7=document.getElementById("nombreSeptimo").value;
+    alert(`el estudiante es ${estudiante7}`)
+}
+
+function enviarNotasE7(){
+    let cantidadDeNota1=document.getElementById("notaNumeroEstudinate7.1").value;
+    let cantidadDeNota2=document.getElementById("notaNumeroEstudinate7.2").value;
+    let cantidadDeNota3=document.getElementById("notaNumeroEstudinate7.3").value;
+    let cantidadDeNota4=document.getElementById("notaNumeroEstudinate7.4").value;
+
+    cantidadDeNota1=parseInt(cantidadDeNota1);
+    cantidadDeNota2=parseInt(cantidadDeNota2);
+    cantidadDeNota3=parseInt(cantidadDeNota3);
+    cantidadDeNota4=parseInt(cantidadDeNota4);
+    guardareNotasSeptimoEstudiante.push(cantidadDeNota1,cantidadDeNota2,cantidadDeNota3,cantidadDeNota4);
+}
+
+function notaMayorE7(){
+    let notaMayor=0;
+    for(let i in guardareNotasSeptimoEstudiante){
+        if(guardareNotasSeptimoEstudiante[i]>notaMayor){
+            notaMayor=guardareNotasSeptimoEstudiante[i];
+        }
+
+    }
+    alert(`La nota mayor obtenida por el estudiante es: ${notaMayor}`)
+}
+
+function notaMenorE7(){
+    let notaMenor=1000;
+    guardareNotasSeptimoEstudiante.forEach(element=>{
+        if(element<notaMenor){
+            notaMenor=element;
+        }
+    })
+    alert(`La nota menor obtenida por el estudiante es ${notaMenor}`)
+}
+
+function promedioEstudianteSeptimo(){
+    let suma=0;
+    let promedio=0;
+    for(let i=0; i<guardareNotasSeptimoEstudiante.length;i++){
+        suma=suma+guardareNotasSeptimoEstudiante[i];
+        promedio=suma/guardareNotasSeptimoEstudiante.length;
+     
+    }
+    alert(`El promedio del estudiante es ${promedio}`)
+}
+
+// -------------------------------------------------------------------------------
+//OBTAVO ESTUDIANTE;
+ function enviarEstudiant8(){
+    let estudiante8=document.getElementById("nombreOctavo").value;
+    alert(`El estudiante es ${estudiante8}`)
+ }
+let guardareNotasOctavoEstudiante=[];
+ function enviarNotasE8(){
+    let cantidadDeNota1=document.getElementById("notaNumeroEstudinate8.1").value;
+    let cantidadDeNota2=document.getElementById("notaNumeroEstudinate8.2").value;
+    let cantidadDeNota3=document.getElementById("notaNumeroEstudinate8.3").value;
+    let cantidadDeNota4=document.getElementById("notaNumeroEstudinate8.4").value;
+
+    cantidadDeNota1=parseInt(cantidadDeNota1);
+    cantidadDeNota2=parseInt(cantidadDeNota2);
+    cantidadDeNota3=parseInt(cantidadDeNota3);
+    cantidadDeNota4=parseInt(cantidadDeNota4);
+
+    guardareNotasOctavoEstudiante.push(cantidadDeNota1,cantidadDeNota2,cantidadDeNota3,cantidadDeNota4)
+ }
+function notaMayorE8(){
+    let notaMayor8=0;
+   guardareNotasOctavoEstudiante.forEach(element=>{
+    if(element>notaMayor8){
+        notaMayor8=element
+    }
+   })
+   alert(`la nota mayor obtenida por el estudiante es ${notaMayor8}`)
+
+}
+function notaMenorE8(){
+    let notaMenor8=10000;
+    for(let i=0; i<guardareNotasOctavoEstudiante.length;i++){
+        if(guardareNotasOctavoEstudiante[i]<notaMenor8){
+            notaMenor8=guardareNotasOctavoEstudiante[i]
+        }
+       
+    }
+    alert(`la nota menor obtenida por el estudiante es ${notaMenor8} `)
+}
+function promedioEstudianteOctavo(){
+    let suma=0;
+    let promedio=0;
+    for(let i=0; i<guardareNotasOctavoEstudiante.length;i++){
+        suma=suma+guardareNotasOctavoEstudiante[i];
+        promedio=suma/guardareNotasOctavoEstudiante.length;
+    }
+    alert(`El promedio obtenido por el estudiante es ${promedio}`)
+}
+
+
+
+
 
 
 
@@ -319,8 +478,30 @@ for(let i of guardareNotasQuintoEstudiante){
     suma5+=i
     promedio5=suma5/guardareNotasQuintoEstudiante.length;
 }
+// ----------------------------------------------------------------------
+let suma6=0;
+let promedio6=0;
+for(let i of guardareNotasSextoEstudiante){
+    suma6+=i;
+    promedio6=suma6/guardareNotasSextoEstudiante.length;
+}
+// --------------------------------------------------------------------
+let suma7=0;
+let promedio7=0;
+for(let i of guardareNotasSeptimoEstudiante){
+    suma7+=i;
+    promedio7=suma7/guardareNotasSeptimoEstudiante.length
 
-alert(`el promedio es`+` `+(promedio1+promedio2+promedio3+promedio4+promedio5))
+}
+// ------------------------------------------------------------------
+let suma8=0;
+let promedio8=0;
+for(let i of guardareNotasOctavoEstudiante){
+    suma8+=i;
+    promedio8=suma8/guardareNotasOctavoEstudiante.length;
+}
+
+alert(`el promedio es`+` `+(promedio1+promedio2+promedio3+promedio4+promedio5+promedio6+promedio7+promedio8)/8)
 }
 
 
@@ -328,3 +509,31 @@ function borrar(){
     window.location.reload();
 }
 
+
+// let suma=0;
+// let factura=[];
+// for(let i=0;i<=4;i++){
+//     let producto1=prompt("digite el nombre del producto").value;
+//     let cantidadP=parseInt(prompt("digite la cantidad"));
+//     let precio=parseInt(prompt("digite el precio"));
+
+//     suma=cantidadP*precio;
+//     factura.push(suma)
+//     alert(`el total de la factura es ${suma}`)
+
+// }
+// let sumar=0;
+// for(let f=0; f<factura.length;f++){
+//     sumar+=factura[f]
+  
+
+// }
+// alert(`el total de las 5 facturas es ${sumar}`)
+
+
+for(let i=0; i<=10;i++){
+
+    for(let f=0; f<=10;f++){
+        console.log(i+"*"+f+"="+(i*f));
+    }
+}
